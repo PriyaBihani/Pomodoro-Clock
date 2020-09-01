@@ -1,0 +1,60 @@
+.AppControls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.AppControls button {
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+    background: inherit;
+    border: none;
+    outline: none;
+    color: var(--color-theme-light);
+    transition: all 0.2s ease-out;
+}
+
+.AppControls button:hover,
+.AppControls button:focus {
+    box-shadow: 0 0 0 2px var(--color-theme-white), 0 0 0 7px dodgerblue;
+}
+
+.AppControls button:active {
+    /* when active, flip the color and background properties */
+    /* scale the buttons to be slightly bigger */
+    background: var(--color-theme-light);
+    color: var(--color-theme-white);
+    /* scale the buttons more horizontally than vertically */
+    -webkit-transform: scaleX(1.2) scaleY(1.08);
+    transform: scaleX(1.2) scaleY(1.08);
+}
+
+.AppControls button svg {
+    width: 80%;
+    height: 80%;
+    fill: #111;
+}
+
+@media (max-width: 600px) {
+    .AppControls {
+        grid-column: span 1;
+        margin: 0;
+    }
+    .AppControls {
+        margin: 10vh 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 100%;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .AppControls button {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+}
